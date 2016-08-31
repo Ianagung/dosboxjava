@@ -17,6 +17,7 @@ import dosbox.interfaces.IOutputter;
 public abstract class Command {
     private static final String INCORRECT_SYNTAX = "The syntax of the command is incorrect.";
     private static final String DEFAULT_ERROR_MESSAGE_WRONG_PARAMETER = "Wrong parameter entered";
+    private static final String INCORRECT_SYNTAX_TIME = "Parameter time salah";
 	private String commandName;
 	private ArrayList<String> parameters = new ArrayList<String>();
 	private IDrive drive;
@@ -79,6 +80,7 @@ public abstract class Command {
 	 * - false if at least one value of one parameter in incorrect.
 	 */
 	protected boolean checkParameterValues(IOutputter outputter) {
+                
 		if(outputter == null) throw new IllegalArgumentException("outputter is null");
 		return true;
 	}

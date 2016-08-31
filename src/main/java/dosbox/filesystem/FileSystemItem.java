@@ -6,7 +6,10 @@
 
 package dosbox.filesystem;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**This class abstracts File and Directory.
  * Composite-Pattern: Component
@@ -29,14 +32,24 @@ public abstract class FileSystemItem {
 
 	private String name;
 	private Directory parent;
+	private String createdTimeStamp;
+	
+	public String getCreatedTimeStamp() {
+		return createdTimeStamp;
+	}
+
 	private static final String ILLEGAL_ARGUMENT_TEXT = "Error: A file or directory name may not contain '/', '\', ',', ' ' or ':'";
 	
 	protected FileSystemItem(String name, Directory parent) throws IllegalArgumentException {
 		if(checkName(name) == false) {
 			throw new IllegalArgumentException(name + " - " + ILLEGAL_ARGUMENT_TEXT);
 		}
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		Date date = new Date();
+		
 		this.name = name;
 		this.parent = parent;
+		this.createdTimeStamp = dateFormat.format(date);
 	}
 
 	/**Returns the name of the file system item.

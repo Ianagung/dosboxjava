@@ -31,7 +31,9 @@ public class CommandFactory {
 		this.commands.add(new CmdMkFile("mkfile", drive));
 
 		// Add your commands here
+		this.commands.add(new CmdExit("exit", drive));
 		this.commands.add(new CmdTime("time", drive));
+
 	}
 	
 	public ArrayList<Command> getCommandList() {

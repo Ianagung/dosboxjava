@@ -34,7 +34,7 @@ public class Console {
         this.outputter.printLine("DOSBox, Scrum.org, Professional Scrum Developer Training");
         this.outputter.printLine("Copyright (c) Rainer Grau and Daniel Tobler. All rights reserved.");
 
-		while(line.trim().compareToIgnoreCase("exit") != 0) {
+		while ( (line.trim().compareToIgnoreCase("exit") != 0) && (line.split(" ")[0].compareToIgnoreCase("exit") != 0)){
 			int readChar = 0;
 			StringBuilder input = new StringBuilder();
 

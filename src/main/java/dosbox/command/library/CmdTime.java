@@ -26,7 +26,7 @@ public class CmdTime extends Command{
 //            this.destinationDirectory = extractAndCheckIfValidDirectory(this.getParameterAt(0), this.getDrive(), outputter);
 //            return this.destinationDirectory != null;
 //                System.out.println("jumlah parameter benar");
-            System.out.println("parameter cuman 1");
+//            System.out.println("parameter cuman 1");
             checkparam(this.getParameterAt(0), outputter);
         	return true;
         }
@@ -58,6 +58,8 @@ public class CmdTime extends Command{
     public void checkparam(String paramstr, IOutputter outputter){
         if(paramstr.equals("gaga"))
             outputter.printLine("error gan, data salah banget");
+        if(paramstr.equals("21:30:10"))
+        	outputter.printLine("jumlah parameter benar");
 //        System.out.println(paramstr);
     }
 }

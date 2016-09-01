@@ -29,11 +29,14 @@ public class CommandFactory {
 		this.commands.add(new CmdMkDir("md", drive));
 		this.commands.add(new CmdMkFile("mf", drive));
 		this.commands.add(new CmdMkFile("mkfile", drive));
+		
 
 		// Add your commands here
 		this.commands.add(new CmdExit("exit", drive));
 		this.commands.add(new CmdTime("time", drive));
 		this.commands.add(new CmdHelp("help", drive));
+		this.commands.add(new CmdType("type", drive));
+		this.commands.add(new CmdVer("ver", drive));
 	}
 	
 	public ArrayList<Command> getCommandList() {

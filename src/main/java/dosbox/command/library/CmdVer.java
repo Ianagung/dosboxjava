@@ -10,8 +10,8 @@ public class CmdVer extends Command{
     private static final String SYSTEM_CANNOT_FIND_THE_PATH_SPECIFIED = "File Not Found"; 
     private Directory directoryToPrint;
     private Date tanggal;
-    private String[] name = {"Ian Agung", "Riyanto", "Eko Prayoga", "Jumas Ranope", "Rimon"};
-    private String[] mail = {"ian.agung@len.co.id", "riyanto@len.co.id", "ekoprayoga@gmail.com", "jumas.ranope@gmail.com", "rimon.vn@gmail.com"};
+    private String[] name = {"Joshua Partogi","Ian Agung", "Riyanto", "Eko Prayoga", "Jumas Ranope", "Rimon"};
+    private String[] mail = {"jpartogi@live.com","ian.agung@len.co.id", "riyanto@len.co.id", "ekoprayoga@gmail.com", "jumas.ranope@gmail.com", "rimon.vn@gmail.com"};
     public CmdVer(String name, IDrive drive) {
         super(name, drive);
     }

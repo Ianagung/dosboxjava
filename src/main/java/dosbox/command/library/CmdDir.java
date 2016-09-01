@@ -71,14 +71,14 @@ class CmdDir extends Command {
         {
             if (item.isDirectory())
             {
-                outputter.print("<DIR>");
+                outputter.print("" + item.getCreatedTimeStamp() + "\t" + "<DIR>");
             }
             else
-            {
-                outputter.print("" + item.getSize());
+            {            	
+                outputter.print("" + item.getCreatedTimeStamp() + "\t" + item.getSize());
             }
 
-            outputter.print("\t" + item.getName() + "\t" + item.getCreatedTimeStamp());
+            outputter.print("\t" + item.getName());
             outputter.newLine();
         }
     }

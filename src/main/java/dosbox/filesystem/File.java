@@ -28,6 +28,7 @@ public class File extends FileSystemItem {
 		this.fileContent = fileContent;
 	}
 
+	@Override
 	public String getFileContent() {
 		return this.fileContent;
 	}

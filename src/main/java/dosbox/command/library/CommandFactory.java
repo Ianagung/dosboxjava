@@ -33,7 +33,7 @@ public class CommandFactory {
 		// Add your commands here
 		this.commands.add(new CmdExit("exit", drive));
 		this.commands.add(new CmdTime("time", drive));
-
+		this.commands.add(new CmdType("type", drive));
 	}
 	
 	public ArrayList<Command> getCommandList() {

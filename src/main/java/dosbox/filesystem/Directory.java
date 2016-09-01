@@ -62,6 +62,8 @@ public class Directory extends FileSystemItem {
 		return item.getParent() != null;
 	}
 	
+	
+	
 	/**Removes a directory or a file from current directory.
 	 * Note: If you need to remove the entire content, you cannot use
 	 * an iterator since you change the list, the iterator is enumerating. 
@@ -102,5 +104,10 @@ public class Directory extends FileSystemItem {
 	@Override
 	public int getSize() {
 		return 0; // A directory has no size
+	}
+
+	@Override
+	public String getFileContent() {
+		return "";
 	}
 }

@@ -143,4 +143,7 @@ public abstract class FileSystemItem {
 	 *         0 if isDirectory() == true
 	 */
 	public abstract int getSize();
+	
+	
+	public abstract String getFileContent();
 }

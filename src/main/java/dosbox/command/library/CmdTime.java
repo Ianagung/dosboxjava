@@ -59,7 +59,7 @@ public class CmdTime extends Command{
         if(paramstr.equals("gaga"))
             outputter.printLine("error gan, data salah banget");
         if(paramstr.equals("21:30:10"))
-        	outputter.printLine("jumlah parameter benar");
+        	outputter.printLine("");
 //        System.out.println(paramstr);
     }
 }

@@ -6,12 +6,13 @@ import dosbox.interfaces.IOutputter;
 import dosbox.command.framework.Command;
 import java.util.Date;
 
-public class CmdTime extends Command{
+public class CmdVer extends Command{
     private static final String SYSTEM_CANNOT_FIND_THE_PATH_SPECIFIED = "File Not Found"; 
     private Directory directoryToPrint;
     private Date tanggal;
-
-    public CmdTime(String name, IDrive drive) {
+    private String[] name = {"Joshua Partogi","Ian Agung", "Riyanto", "Eko Prayoga", "Jumas Ranope", "Rimon"};
+    private String[] mail = {"jpartogi@live.com","ian.agung@len.co.id", "riyanto@len.co.id", "ekoprayoga@gmail.com", "jumas.ranope@gmail.com", "rimon.vn@gmail.com"};
+    public CmdVer(String name, IDrive drive) {
         super(name, drive);
     }
 	@Override
@@ -32,8 +33,8 @@ public class CmdTime extends Command{
         }
         else if(getParameterCount() == 0 )
         {
-            tanggal = new Date();
-            outputter.printLine("Tanggal sekarang adalah " + tanggal);
+//            tanggal = new Date();
+            outputter.printLine("Microsoft Windows XP [Version 5.1.2600]");
             return true;
         }
         else    
@@ -56,10 +57,17 @@ public class CmdTime extends Command{
     }
     
     public void checkparam(String paramstr, IOutputter outputter){
-        if(paramstr.equals("gaga"))
-            outputter.printLine("error gan, data salah banget");
-        if(paramstr.equals("21:30:10"))
-        	outputter.printLine("");
+        if(paramstr.equalsIgnoreCase("/w"))
+        {
+        	outputter.printLine("Microsoft Windows XP [Version 5.1.2600]");
+        	for(int i=0 ; i<name.length ; i++)
+        	{
+        	outputter.printLine(name[i]);
+            outputter.printLine(mail[i]);
+        	}
+//        if(paramstr.equals("21:30:10"))
+//        	outputter.printLine(" ");
 //        System.out.println(paramstr);
+        }
     }
 }

@@ -44,7 +44,7 @@ public abstract class FileSystemItem {
 		if(checkName(name) == false) {
 			throw new IllegalArgumentException(name + " - " + ILLEGAL_ARGUMENT_TEXT);
 		}
-		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm aa");
 		Date date = new Date();
 		
 		this.name = name;
@@ -143,4 +143,7 @@ public abstract class FileSystemItem {
 	 *         0 if isDirectory() == true
 	 */
 	public abstract int getSize();
+	
+	
+	public abstract String getFileContent();
 }

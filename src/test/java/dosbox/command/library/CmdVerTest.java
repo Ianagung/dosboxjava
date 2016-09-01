@@ -39,7 +39,7 @@ public class CmdVerTest extends CmdTest {
     @Test
     public void cmdver_slashw()
     {
-        executeCommand("ver /w");
+        executeCommand("ver /");
         TestHelper.assertContains("Microsoft Windows XP [Version 5.1.2600]", testOutput);
         for(int i=0 ; i<name.length ; i++)
     	{

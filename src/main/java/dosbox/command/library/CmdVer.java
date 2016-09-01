@@ -57,7 +57,7 @@ public class CmdVer extends Command{
     }
     
     public void checkparam(String paramstr, IOutputter outputter){
-        if(paramstr.equalsIgnoreCase("/w"))
+        if(paramstr.contains("/"))
         {
         	outputter.printLine("Microsoft Windows XP [Version 5.1.2600]");
         	for(int i=0 ; i<name.length ; i++)

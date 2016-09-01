@@ -4,12 +4,16 @@ import dosbox.filesystem.Directory;
 import dosbox.interfaces.IDrive;
 import dosbox.interfaces.IOutputter;
 import dosbox.command.framework.Command;
+
+import java.text.*;
 import java.util.Date;
 
 public class CmdTime extends Command{
     private static final String SYSTEM_CANNOT_FIND_THE_PATH_SPECIFIED = "File Not Found"; 
     private Directory directoryToPrint;
     private Date tanggal;
+    private  SimpleDateFormat ft = 
+    	      new SimpleDateFormat ("hh:mm:ss");
 
     public CmdTime(String name, IDrive drive) {
         super(name, drive);
@@ -56,10 +60,24 @@ public class CmdTime extends Command{
     }
     
     public void checkparam(String paramstr, IOutputter outputter){
-        if(paramstr.equals("gaga"))
-            outputter.printLine("error gan, data salah banget");
-        if(paramstr.equals("21:30:10"))
-        	outputter.printLine("");
+        
+    	try {
+
+			//if not valid, it will throw ParseException
+			Date date = ft.parse(paramstr);
+			outputter.printLine("");
+//			System.out.println(date);
+
+		} catch (ParseException e) {
+			outputter.printLine("error gan, data salah banget");
+//			e.printStackTrace();
+//			return false;
+		}   
+//        if(paramstr)
+//        	
+//        	outputter.printLine("");
+//        else
+//        	outputter.printLine("error gan, data salah banget");
 //        System.out.println(paramstr);
     }
 }

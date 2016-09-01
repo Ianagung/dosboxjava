@@ -73,7 +73,7 @@ public class Drive implements IDrive {
 	}
 
 	public String getPrompt() {
-		return this.currentDir.getPath() + "> ";
+		return this.label + this.currentDir.getPath() + "> ";
 	}
 
 	/**Same as getDriveName()
